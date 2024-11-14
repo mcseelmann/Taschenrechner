@@ -7,6 +7,9 @@ altesErgebnis = false;
 
 document.addEventListener("keydown",eingabe);
 
+/**
+ * checks user input
+ */
 function eingabe() {
   //console.log(event.key, event.keyCode);
   if(event.keyCode >= 96 && event.keyCode <= 105 || event.keyCode >= 48 && event.keyCode <= 57){
@@ -58,6 +61,9 @@ function number(n){
   console.log(localStorage.getItem("a4"));*/
 }
 
+/**
+ * function adds
+ */
 function plus(){
   if(altesErgebnis == true){
     rechnung = [];
@@ -69,6 +75,10 @@ function plus(){
   rechnung.push(" + ");
   showRechnung(rechnung);
 }
+
+/**
+ * function subtracts 
+ */
 function minus(){
   if(altesErgebnis == true){
     rechnung = [];
