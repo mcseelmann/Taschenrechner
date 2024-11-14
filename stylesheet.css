@@ -1,10 +1,7 @@
 :root {
-  --c-lightgrey: #9000ff;
-  /* #f0f0f0; */
-  --c-grey: #ff78eb;
-  /* #cbcbcb; */
-  --c-darkgrey: #6360ff;
-  /* #b0b0b0; */
+  --c-lightgrey: #f0f0f0;
+  --c-grey: #cbcbcb;
+  --c-darkgrey: #b0b0b0;
 }
 
 div {
