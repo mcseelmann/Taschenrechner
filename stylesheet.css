@@ -1,0 +1,51 @@
+:root {
+  --c-lightgrey: #f0f0f0;
+	--c-grey: #cbcbcb;
+  --c-darkgrey: #b0b0b0;
+}
+
+div {
+  font-size:1.3em;
+}
+
+body {
+  max-width:1800px;
+  margin-left:auto;
+  margin-right:auto
+}
+
+body, .verlauf, .speicher{
+  background-color:var(--c-lightgrey);
+  padding:4px;
+}
+
+.btndiv{
+  background-color:var(--c-grey);
+}
+
+.btndiv:hover{
+  background-color:var(--c-darkgrey);
+  transition-duration: 0.07s;
+}
+
+.btndiv:active{
+  background-color:grey; 
+}
+
+.speicherdiv:hover {
+  background-color:var(--c-grey);
+  transition-duration: 0.07s;
+}
+
+.verlauf, .speicher {
+  display:none;
+  
+}
+
+.verlauf:hover, .speicher:hover{
+  background-color:var(--c-grey);
+}
+
+.verlauf:active, .speicher:hover{
+  background-color:var(--c-darkgrey);
+}
