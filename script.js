@@ -390,13 +390,6 @@ function speicherSpeichern() {
                 storage[1] = storage[0];
                 storage[0] = zwErg;
                 break;
-            case 5:
-                storage[4] = storage[5];
-                storage[3] = storage[2];
-                storage[2] = storage[1];
-                storage[1] = storage[0];
-                storage[0] = zwErg;
-                break;
         }
     }
     if (erg != 0) {
@@ -420,13 +413,6 @@ function speicherSpeichern() {
                 storage[0] = erg.toString();
                 break;
             case 4:
-                storage[3] = storage[2];
-                storage[2] = storage[1];
-                storage[1] = storage[0];
-                storage[0] = erg.toString();
-                break;
-            case 5:
-                storage[4] = storage[3];
                 storage[3] = storage[2];
                 storage[2] = storage[1];
                 storage[1] = storage[0];
