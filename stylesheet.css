@@ -1,59 +1,59 @@
 :root {
-  --c-lightgrey: #9000ff;
-  /* #f0f0f0; */
-  --c-grey: #ff78eb;
-  /* #cbcbcb; */
-  --c-darkgrey: #6360ff;
-  /* #b0b0b0; */
+    --c-lightgrey: #9000ff;
+    /* #f0f0f0; */
+    --c-grey: #ff78eb;
+    /* #cbcbcb; */
+    --c-darkgrey: #6360ff;
+    /* #b0b0b0; */
 }
 
 div {
-  font-size: 1.3em;
+    font-size: 1.3em;
 }
 
 body {
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto
 }
 
 body,
 .verlauf,
 .speicher {
-  background-color: var(--c-lightgrey);
-  padding: 4px;
+    background-color: var(--c-lightgrey);
+    padding: 4px;
 }
 
 .btndiv {
-  background-color: var(--c-grey);
+    background-color: var(--c-grey);
 }
 
 .btndiv:hover {
-  background-color: var(--c-darkgrey);
-  transition-duration: 0.07s;
+    background-color: var(--c-darkgrey);
+    transition-duration: 0.07s;
 }
 
 .btndiv:active {
-  background-color: grey;
+    background-color: grey;
 }
 
 .speicherdiv:hover {
-  background-color: var(--c-grey);
-  transition-duration: 0.07s;
+    background-color: var(--c-grey);
+    transition-duration: 0.07s;
 }
 
 .verlauf,
 .speicher {
-  display: none;
+    display: none;
 
 }
 
 .verlauf:hover,
 .speicher:hover {
-  background-color: var(--c-grey);
+    background-color: var(--c-grey);
 }
 
 .verlauf:active,
 .speicher:hover {
-  background-color: var(--c-darkgrey);
+    background-color: var(--c-darkgrey);
 }
