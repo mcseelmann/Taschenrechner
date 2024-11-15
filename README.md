@@ -37,4 +37,4 @@
    (git_env)
    ```
 
-4. Zusätzlich zur lokalen Überprüfung der Dateien laufen auch auf dem GitHub-Server dieselben überprüfungen in einer [GitHub-Action](https://github.com/mcseelmann/Taschenrechner/actions). 
+4. Zusätzlich zur lokalen Überprüfung der Dateien laufen auch auf dem GitHub-Server dieselben überprüfungen in einer [GitHub-Action](https://github.com/mcseelmann/Taschenrechner/actions).
