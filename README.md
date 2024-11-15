@@ -17,5 +17,5 @@
 
    ```
    (git_env) cd Taschenrechner
-   (git_env) re-commit install
+   (git_env) pre-commit install
    ```
