@@ -93,7 +93,7 @@ function minus() {
 }
 
 /**
- * function multiplies 
+ * function multiplies
  */
 function multiply() {
     if (altesErgebnis == true) {
