@@ -234,6 +234,7 @@ let v1 = [];
 let v2 = [];
 let v3 = [];
 let v4 = [];
+let v5 = [];
 
 function verlaufSpeichern(rech, ergeb) {
     let i = 0;
@@ -281,11 +282,24 @@ function verlaufSpeichern(rech, ergeb) {
         document.getElementById("verlauf4").style.display = "block";
         document.getElementById("verlauf4").innerHTML = v4.join("");
     }
+    else if (v5.length < 1) {
+        while (i < rechnung.length) {
+            v5[i] = rechnung[i];
+            i++;
+        }
+        v5.push(" = ");
+        v5.push("<b>" + erg + "</b>");
+        zwErg = "";
+        document.getElementById("verlauf5").style.display = "block";
+        document.getElementById("verlauf5").innerHTML = v5.join("");
+    }
     else {
         v1 = v2;
         v2 = v3;
         v3 = v4;
-        v4 = [];
+        v4 = v5;
+        v5 = [];
+        document.getElementById("verlauf4").innerHTML = v4.join("");
         document.getElementById("verlauf3").innerHTML = v3.join("");
         document.getElementById("verlauf2").innerHTML = v2.join("");
         document.getElementById("verlauf1").innerHTML = v1.join("");
@@ -299,6 +313,14 @@ function abrufen(p) {
     let i = 0;
     rechnung = [];
     switch (p) {
+        case 5:
+            while (i < v5.length - 2) {
+                rechnung[i] = v5[i];
+                i++;
+            }
+            erg = v5[v5.length - 1];
+            erg = erg.slice(3, erg.length - 4);
+            break;
         case 4:
             while (i < v4.length - 2) {
                 rechnung[i] = v4[i];
@@ -367,6 +389,14 @@ function speicherSpeichern() {
                 storage[2] = storage[1];
                 storage[1] = storage[0];
                 storage[0] = zwErg;
+                break;
+            case 5:
+                storage[4] = storage[5];
+                storage[3] = storage[2];
+                storage[2] = storage[1];
+                storage[1] = storage[0];
+                storage[0] = zwErg;
+                break;
         }
     }
     if (erg != 0) {
@@ -394,6 +424,14 @@ function speicherSpeichern() {
                 storage[2] = storage[1];
                 storage[1] = storage[0];
                 storage[0] = erg.toString();
+                break;
+            case 5:
+                storage[4] = storage[3];
+                storage[3] = storage[2];
+                storage[2] = storage[1];
+                storage[1] = storage[0];
+                storage[0] = erg.toString();
+                break;
         }
     }
     localStorage.setItem("storage", JSON.stringify(storage));
