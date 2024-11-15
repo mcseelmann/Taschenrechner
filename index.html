@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--Hello im a comment made by Eleni-->
     <div class="container-fluid">
         <!--Rechnungsanzeige-->
         <div id="rechnung" class="row justify-content-end my-1 px-3" style="font-size:20px; font-weight:300">
@@ -111,110 +112,117 @@
                 &#8543;&#119909; <!-- 1/x -->
             </div>
             <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="plusminus()">
-                &#177; <!-- +/- -->
+                <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="plusminus()">
+                    &#177; <!-- +/- -->
+                </div>
+                <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="number(0)">
+                    <b>0</b>
+                </div>
+                <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="number('.')">
+                    <b>&#46;</b> <!-- . -->
+                </div>
+                <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="result()">
+                    &#61; <!-- = -->
+                </div>
             </div>
-            <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="number(0)">
-                <b>0</b>
+            <!--Eingabefeld--ENDE-->
+            <!--Verlauf-->
+            <div class="row h-auto ">
+                <div class="col-6">
+                    <ul class="list-group list-group-flush m-4">
+                        <h3 class="list-group-item-heading">Verlauf</h3>
+                        <li id="verlauf4" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(4)">
+                        </li>
+                        <li id="verlauf3" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(3)">
+                        </li>
+                        <li id="verlauf2" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(2)">
+                        </li>
+                        <li id="verlauf1" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(1)">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="list-group list-group-flush m-4">
+                        <h3 class="list-group-item-heading">Arbeitsspeicher</h3>
+                        <li id="speicherBox1" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
+                            <div class="row h-auto ">
+                                <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(1)">
+                                    <div id="speicher1"></div>
+                                </div>
+                                <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(1)">
+                                        MC
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(1)">
+                                        M+
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(1)">
+                                        M-
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="speicherBox2" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
+                            <div class="row h-auto ">
+                                <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(2)">
+                                    <div id="speicher2"></div>
+                                </div>
+                                <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(2)">
+                                        MC
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(2)">
+                                        M+
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(2)">
+                                        M-
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="speicherBox3" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
+                            <div class="row h-auto ">
+                                <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(3)">
+                                    <div id="speicher3"></div>
+                                </div>
+                                <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(3)">
+                                        MC
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(3)">
+                                        M+
+                                    </div>
+                                    <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(3)">
+                                        M-
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="speicherBox4" class="list-group-item speicher" style="font-size:0.8em; font-weight:700" onclick="wiederHolen(4)">
+                            <div class="row h-auto ">
+                                <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%">
+                                    <div id="speicher4"></div>
+                                    <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%">
+                                        <div id="speicher4"></div>
+                                    </div>
+                                    <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
+                                        <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(4)">
+                                            MC
+                                        </div>
+                                        <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(4)">
+                                            M+
+                                        </div>
+                                        <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(4)">
+                                            M-
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="number('.')">
-                <b>&#46;</b> <!-- . -->
-            </div>
-            <div class="col  py-5 d-inline-flex justify-content-around btndiv" onclick="result()">
-                &#61; <!-- = -->
-            </div>
+            <!--Verlauf--ENDE-->
         </div>
-        <!--Eingabefeld--ENDE-->
-        <!--Verlauf-->
-        <div class="row h-auto ">
-            <div class="col-6">
-                <ul class="list-group list-group-flush m-4">
-                    <h3 class="list-group-item-heading">Verlauf</h3>
-                    <li id="verlauf4" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(4)"></li>
-                    <li id="verlauf3" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(3)"></li>
-                    <li id="verlauf2" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(2)"></li>
-                    <li id="verlauf1" class="list-group-item verlauf" style="font-size:0.8em" onclick="abrufen(1)"></li>
-                </ul>
-            </div>
-            <div class="col-6">
-                <ul class="list-group list-group-flush m-4">
-                    <h3 class="list-group-item-heading">Arbeitsspeicher</h3>
-                    <li id="speicherBox1" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
-                        <div class="row h-auto ">
-                            <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(1)">
-                                <div id="speicher1"></div>
-                            </div>
-                            <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(1)">
-                                    MC
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(1)">
-                                    M+
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(1)">
-                                    M-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="speicherBox2" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
-                        <div class="row h-auto ">
-                            <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(2)">
-                                <div id="speicher2"></div>
-                            </div>
-                            <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(2)">
-                                    MC
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(2)">
-                                    M+
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(2)">
-                                    M-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="speicherBox3" class="list-group-item speicher" style="font-size:0.8em; font-weight:700">
-                        <div class="row h-auto ">
-                            <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%" onclick="wiederHolen(3)">
-                                <div id="speicher3"></div>
-                            </div>
-                            <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(3)">
-                                    MC
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(3)">
-                                    M+
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(3)">
-                                    M-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="speicherBox4" class="list-group-item speicher" style="font-size:0.8em; font-weight:700" onclick="wiederHolen(4)">
-                        <div class="row h-auto ">
-                            <div class=" col-6 d-inline-flex justify-content-start align-items-center " style="font-size:0.6em; max-width:50%">
-                                <div id="speicher4"></div>
-                            </div>
-                            <div class="row h-auto d-inline-flex justify-content-end" style="max-width:50%">
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="loeschen(4)">
-                                    MC
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryPlus(4)">
-                                    M+
-                                </div>
-                                <div class="col-2 mx-2 py-2 speicherdiv d-inline-flex justify-content-center align-items-center text-primary" style="font-size:0.4em" onclick="memoryMinus(4)">
-                                    M-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--Verlauf--ENDE-->
     </div>
 </body>
-
 </html>
