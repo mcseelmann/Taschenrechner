@@ -16,6 +16,6 @@
 2. pre-commit im Taschenrechner-Projekt aktivieren
 
    ```
-   (git_env) Taschenrechner
-   (git_env) re-commit install
+   (git_env) cd Taschenrechner
+   (git_env) pre-commit install
    ```
