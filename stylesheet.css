@@ -43,12 +43,9 @@ body,
 .speicher {
     display: none;
 
-}
-
 .verlauf:hover,
 .speicher:hover {
     background-color: var(--c-grey);
-}
 
 .verlauf:active,
 .speicher:hover {

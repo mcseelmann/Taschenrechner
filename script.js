@@ -61,6 +61,7 @@ function number(n) {
     console.log(localStorage.getItem("a4"));*/
 }
 
+
 /**
  * function adds
  */
@@ -90,6 +91,10 @@ function minus() {
     rechnung.push(" - ");
     showRechnung(rechnung);
 }
+
+/**
+ * function multiplies
+ */
 function multiply() {
     if (altesErgebnis == true) {
         rechnung = [];
