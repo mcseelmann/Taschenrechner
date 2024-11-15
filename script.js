@@ -61,6 +61,7 @@ function number(n) {
     console.log(localStorage.getItem("a4"));*/
 }
 
+
 /**
  * function adds
  */
