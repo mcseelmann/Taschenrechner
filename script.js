@@ -90,6 +90,10 @@ function minus() {
     rechnung.push(" - ");
     showRechnung(rechnung);
 }
+
+/**
+ * function multiplies 
+ */
 function multiply() {
     if (altesErgebnis == true) {
         rechnung = [];
